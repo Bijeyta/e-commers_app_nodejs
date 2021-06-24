@@ -1,0 +1,31 @@
+.form-class{
+    height: 600px;
+    width: 500px;
+    margin-left: 650px;
+    margin-top: 50px;
+}
+
+.form-class label{
+    font-size: 20px;
+    font-family: sans-serif;
+}
+.form-class input,
+.form-class textarea{
+    width: 250px;
+    border-radius: 3px;
+}
+.btn{
+    height: 38px;
+    width: 95px;
+    border: 1px solid black;
+    border-radius: 3px;
+    margin-top: 9px;
+    color: green;
+    background-color: white;
+    font-size: 15px;
+}
+
+.btn:hover{
+    color: white;
+    background-color: orange;
+}

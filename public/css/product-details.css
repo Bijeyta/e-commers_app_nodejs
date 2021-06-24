@@ -1,0 +1,21 @@
+.product-main{
+    text-align: center;
+}
+.product-main img{
+    height: 20rem;
+}
+
+.btn{
+    height: 38px;
+    width: 90px;
+    border: 1px solid black;
+    border-radius: 3px;
+    margin-top: 9px;
+    color: green;
+    background-color: white;
+    font-size: 15px;
+}
+.btn:hover{
+    color: white;
+    background-color: orange;
+}

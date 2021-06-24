@@ -1,0 +1,156 @@
+<%- include('../includes/head.ejs') %>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/navigation.css" />
+    <link rel="stylesheet" href="./css/home.css" />
+
+    <script>
+		var A=new Array('../images/sean1.jpg','../images/sean2.jpg','../images/sean3.jpg','../images/sean4.jpg','../images/sean5.jpg');
+		var x=0;
+		function forward()
+		{
+			if(x<A.length-1)
+			{
+				x++;
+			}
+			else
+			{
+				x=0;
+				document.getElementById("pic").src=A[x];
+			}
+		}	
+		function back()
+		{	
+			if(x>0)
+			{
+				x--;
+			}
+			else
+			{
+				x=A.length-1;
+				document.getElementById("pic").src=A[x];
+			}
+		}
+	</script>
+</head>
+<body>
+    <%- include('../includes/navigation.ejs') %>
+    <div id="image">
+        <div id="image1">
+            <img src="../images/sean1.jpg" id="pic" alt="A image"/>
+        </div>
+        <div id="image2">
+            <img src="../images/back.jfif" onclick="back();" alt="A image"/>
+            <img align="right" src="../images/fwd.png" onclick="forward();" alt="A image"/>
+        </div>
+    </div>
+    <div class="middle-class-1">
+        <h1>Popular Products</h1>
+
+        <div class="sub-middle">
+
+        </div>
+        <div class="sub-middle">
+            
+        </div>
+        <div class="sub-middle">
+            
+        </div>
+        <button class="middle-class-btn">View More</button>
+        <div class="sub-middle-container">
+            <div class="sub-middle-container-1">
+                <img src="../images/background4.jpg" alt="A Image" />
+            </div>
+            <div class="sub-middle-container-1">
+                <h2>Our Goal</h2><br>
+                <p>This is some dummy text, I am using here just to see wheather my view is looking goog or not, if it is not looking good then i wiil chage it fu!rther</p>
+            </div>
+        </div>
+    </div>
+    
+    <section>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="testimonialBox">
+                        <img src="" alt="image" class="quote">
+                        <div class="content">
+                            <p>Lorem dolar site amet, consectetur adipisicing elit, sed de eiusmod tempor incididunt ut lahore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris m=nisi ut aliquip ex ea commodo consequat.</p>
+                            <div class="details">
+                                <div class="imgBx">
+                                    <img src="" alt="photo">
+                                </div>
+                                <h3>Someone famous<br><span>Creative Designer</span></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="testimonialBox">
+                        <img src="" alt="image" class="quote">
+                        <div class="content">
+                            <p>Lorem dolar site amet, consectetur adipisicing elit, sed de eiusmod tempor incididunt ut lahore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris m=nisi ut aliquip ex ea commodo consequat.</p>
+                            <div class="details">
+                                <div class="imgBx">
+                                    <img src="" alt="photo">
+                                </div>
+                                <h3>Someone famous<br><span>Creative Designer</span></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="testimonialBox">
+                        <img src="" alt="image" class="quote">
+                        <div class="content">
+                            <p>Lorem dolar site amet, consectetur adipisicing elit, sed de eiusmod tempor incididunt ut lahore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris m=nisi ut aliquip ex ea commodo consequat.</p>
+                            <div class="details">
+                                <div class="imgBx">
+                                    <img src="" alt="photo">
+                                </div>
+                                <h3>Someone famous<br><span>Creative Designer</span></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="footer" style="height: 350px; width: 100%; background-color: black; color: white; text-align: center;">
+        <h1 style="padding-top: 20px;">Miss Bijeyta</h1>
+        <p style="padding-top: 10px">All right Reserved</p>
+    </div>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        function slide_img()
+        {
+            document.getElementById("pic").src=A[x];
+            if(x<A.length-1)
+            {
+                x++;
+            }
+            else
+            {
+                x=0;
+            }
+            setTimeout("slide_img()",2000);
+        }
+        slide_img();
+    </script> 
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+          effect: 'coverflow',
+          grabCursor: true,
+          centeredSlides: true,
+          slidesPerView: 'auto',
+          coverflowEffect: {
+            rotate: 0,
+            stretch: 0,
+            depth: 100,
+            modifier: 2,
+            slideShadows: true,
+          },
+          loop: true,
+        });
+      </script>
+<%- include('../includes/end.ejs') %>
